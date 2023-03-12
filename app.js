@@ -34,3 +34,23 @@ function appTodo(event){
     todoText.focus();
 }
 
+function deleteCheck(event){
+    const item= event.target;
+    //DELETE TODO
+    if(item.classList[0]==='trash-btn'){
+        // document.querySelector('.todo').remove();
+        const todo = item.parentElement;
+        //Falling animation
+        todo.classList.add('fall');
+        //Transitionend event fired when the CSS transition has completed
+        todo.addEventListener('transitionend', function(){
+            todo.remove();
+        })
+
+    }
+    //CHECK TODO
+    if(item.classList[0]==='check-btn'){
+        const todo=item.parentElement;
+        todo.classList.toggle('completed');
+    }
+}
