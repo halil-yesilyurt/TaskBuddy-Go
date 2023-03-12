@@ -55,6 +55,8 @@ form {
     justify-content: space-between;
     align-items: center;
     transition: all .5s ease;
+    max-width: 30vw;
+    word-break: break-word;
 }
 .todo li{
     flex: 1;
@@ -83,4 +85,37 @@ form {
 .fall{
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+}
+/*reset dropdown styles*/
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+select{
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1.19rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff6f47;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .2s ease;
+}
+.select:hover::after{
+    background: #fff;
+    color: #ff6f47;
 }
