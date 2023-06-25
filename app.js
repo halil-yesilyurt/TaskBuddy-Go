@@ -52,6 +52,7 @@ function deleteCheck(event) {
     const todo = item.parentElement;
     //Falling animation
     todo.classList.add('fall');
+    removeLocalTodos(todo);
     //Transitionend event fired when the CSS transition has completed
     todo.addEventListener('transitionend', function () {
       todo.remove();
@@ -134,3 +135,18 @@ function getTodos() {
       todoList.appendChild(todoWrap);
     });
   }
+
+// REMOVE TODOS FROM LOCAL STORAGE
+function removeLocalTodos(todo){
+  let todos;
+    if (localStorage.getItem('todos') === null) {
+      todos = [];
+    } else {
+      todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    const todoIndex= todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+//create different storages for completed items
