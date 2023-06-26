@@ -23,7 +23,7 @@ git clone https://github.com/your-username/todo-list.git
 
 2. Navigate to the project directory:
 ```bash
-cd todo-list
+cd taskbuddy-go
 ```
 
 3. Open the `index.html` file in your preferred web browser.
