@@ -1,4 +1,4 @@
-# [TaskBuddy Go](https://halil-yesilyurt.github.io/TaskBuddy-Go/)
+# TaskBuddy Go
 This is a simple TodoList project built using HTML, CSS, and vanilla JavaScript. The main focus of this project is functionality rather than styling. Users can add their to-do items, mark them as completed, or delete them as desired. The list items are saved in the local storage, which updates itself when adding or deleting items. Users can also filter the list to display completed, incompleted, or all items using a select option.
 
 ## Features
